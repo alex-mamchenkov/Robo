@@ -22,13 +22,20 @@
         }
     },
     "bin":["robo"],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/greg-1-anderson/yaml-expander"
+        }
+    ],
     "require": {
         "php": ">=5.5.0",
         "league/container": "^2.2",
         "consolidation/log": "~1",
         "consolidation/config": "^1.0.1",
-        "consolidation/annotated-command": "^2.8.1",
-        "consolidation/output-formatters": "^3.1.5",
+        "consolidation/annotated-command": "^2.8.2",
+        "consolidation/output-formatters": "^3.1.13",
+        "grasmash/yaml-expander": "dev-symfony-4 as 1.2.1",
         "symfony/finder": "^2.5|^3|^4",
         "symfony/console": "^2.8|^3|^4",
         "symfony/process": "^2.5|^3|^4",
@@ -37,13 +44,12 @@
     },
     "require-dev": {
         "patchwork/jsqueeze": "~2",
-        "henrikbjorn/lurker": "~1",
         "natxet/CssMin": "3.0.4",
         "pear/archive_tar": "^1.4.2",
-        "codeception/base": "^2.2.6",
+        "codeception/codeception": "2.3.x-dev",
         "codeception/verify": "^0.3.2",
-        "codeception/aspect-mock": "~1",
-        "satooshi/php-coveralls": "~1",
+        "codeception/aspect-mock": "dev-master",
+        "satooshi/php-coveralls": "^1.0.2|dev-master",
         "phpunit/php-code-coverage": "~2|~4",
         "squizlabs/php_codesniffer": "^2.8"
     },
@@ -54,9 +60,9 @@
         "cs": "./robo sniff",
         "test": "./robo test"
     },
+    "minimum-stability": "rc",
     "config": {
         "optimize-autoloader": true,
-        "preferred-install": "dist",
         "sort-packages": true,
         "platform": {
             "php": "5.6"
